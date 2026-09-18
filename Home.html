@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+     <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Umbilo Car Wash & Shisanyama</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    
+     <header>
+   <div class="header-title-container">
+      <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&w=300&q=80" alt="Umbilo Car Wash" class="header-img" />
+      <h1>Umbilo Car Wash & Shisanyama</h1>
+    </div>
+    <p>Professional Valet & Fresh Braai Hospitality in Umbilo</p>
+  </header>
+  <nav>
+    <a href="#story">Our Story</a>
+    <a href="#services">Services & Menu</a>
+    <a href="#calculator">Estimate Cost</a>
+    <a href="#booking">Book Wash & Table</a>
+    <a href="#contact">Contact & Map</a>
+  </nav>
+  <section id="story">
+      <h2 class="section-title">Our Story</h2>
+      <p style="color: var(--text-muted);">
+        Umbilo Car Wash & Shisanyama started as a humble side hustle operating out of a small lot with a single hose and an open braai drum. Recognizing that motorists were tired of waiting on dusty curbs while their vehicles were cleaned, we introduced fresh braai platters, cold drinks, and local music. Today, we are Umbilo's premier lifestyle hub where automotive care meets true South African hospitality!
+      </p>
+      <section id="services">
+      <h2 class="section-title">Car Wash Packages</h2>
+      <div class="card-grid" style="margin-bottom: 30px;">
+        <div class="card">
+          <h3>🚗 Express Wash & Go</h3>
+          <p class="price-tag">R70.00</p>
+          <p>High-pressure foam wash, exterior hand dry, wheel cleaning, and tyre shine polish.</p>
+        </div>
+        <div class="card">
+          <h3>✨ Full Executive Valet</h3>
+          <p class="price-tag">R150.00</p>
+          <p>Full exterior wash, interior vacuum, dashboard wipe down, air freshener, and window shine.</p>
+        </div>
+        <div class="card">
+          <h3>🧼 Underbody Wash & Polish</h3>
+          <p class="price-tag">R110.00</p>
+          <p>Chassis under-spray, high-gloss body wax finish, rim degreasing, and tyre shine.</p>
+        </div>
+        <div class="card">
+          <h3>💎 Interior Leather & Steam Detail</h3>
+          <p class="price-tag">R280.00</p>
+          <p>Deep interior carpet vacuum, leather conditioning treatment, steam stain removal, and odor cure.</p>
+        </div>
+      </div>
+
+      <h2 class="section-title">Shisanyama Menu</h2>
+      <div class="card-grid">
+        <div class="card food">
+          <h3>🔥 Single Braai Platter</h3>
+          <p class="price-tag">R95.00</p>
+          <p>Grilled boerewors piece, 1 chicken quarter, soft pap, chakalaka, and spicy salsa.</p>
+        </div>
+        <div class="card food">
+          <h3>🍗 Braai Wings & Chips Platter</h3>
+          <p class="price-tag">R120.00</p>
+          <p>6 flame-grilled sticky braai wings served with seasoned cut chips, roll, and chakalaka.</p>
+        </div>
+        <div class="card food">
+          <h3>🥩 Chop & Wors Combo</h3>
+          <p class="price-tag">R140.00</p>
+          <p>Tender lamb chop, traditional boerewors piece, pap, gravy, and fresh coleslaw.</p>
+        </div>
+        <div class="card food">
+          <h3>🍖 Full Combo Feast</h3>
+          <p class="price-tag">R240.00</p>
+          <p>Generous platter of pork chops, chuck beef, boerewors, wings, double pap, and salad.</p>
+        </div>
+        <div class="card food">
+          <h3>👑 Family Sharing Board</h3>
+          <p class="price-tag">R450.00</p>
+          <p>Mega platter with chuck beef, pork chops, boerewors, 4 chicken quarters, 4 pap portions, chakalaka & 2L drink.</p>
+        </div>
+      </div>
+section id="booking">
+      <h2 class="section-title">Book Your Wash & Reserve a Table</h2>
+      <form onsubmit="handleBooking(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required placeholder="e.g. Sipho Ndlovu">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="082 123 4567">
+        </div>
+        <div class="form-group">
+          <label for="wash-type">Select Wash Package</label>
+          <select id="wash-type">
+            <option value="none">None (Shisanyama Only)</option>
+            <option value="express">Express Wash & Go (R70)</option>
+            <option value="underbody">Underbody Wash & Polish (R110)</option>
+            <option value="executive">Full Executive Valet (R150)</option>
+            <option value="detail">Interior Leather & Steam Detail (R280)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="food-order">Select Shisanyama Order</label>
+          <select id="food-order">
+            <option value="none">None (Car Wash Only)</option>
+            <option value="single">Single Braai Platter (R95)</option>
+            <option value="wings">Braai Wings & Chips Platter (R120)</option>
+            <option value="chopwors">Chop & Wors Combo (R140)</option>
+            <option value="combo">Full Combo Feast (R240)</option>
+            <option value="family">Family Sharing Board (R450)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date-time">Arrival Date & Time</label>
+          <input type="datetime-local" id="date-time" required>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Confirm Booking ➔</button>
+      </form>
+    </section>
+    <section id="contact">
+      <h2 class="section-title">Contact & Location</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>📍 Location</h3>
+          <p style="margin-top: 10px; color: var(--text-muted);">Umbilo Road, Durban, Kwazulu-Natal, 4001</p>
+          <p style="margin-top: 10px;"><strong>Hours:</strong> Mon - Sun: 08:00 - 18:00</p>
+          <p style="margin-top: 5px;"><strong>Phone:</strong> 031 555 0192</p>
+        </div>
+        <div class="card" style="padding: 0; overflow: hidden;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13844.757871216518!2d30.9850!3d-29.8731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a99f7d6a5035%3A0x500cbd1a01332f0!2sUmbilo%2C%20Durban!5e0!3m2!1sen!2sza!4v1700000000000!5m2!1sen!2sza" 
+            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+     <footer>
+    <p>&copy; 2026 Umbilo Car Wash & Shisanyama | All Rights Reserved</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(7, 12, 12);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: aliceblue;
+    margin: 0;
+    padding: 20px;
+}
+
+h1{
+    color: lavender;
+    font-size: 36px;
+    text-align: center;
+    background-color: rgb(10, 12, 14);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 17px;
+    line-height: 1.9;
+    color: ghostwhite;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+ul{
+    word-spacing: normal;
+    font-size: medium;
+    text-decoration-color: aliceblue;
+    background: black;
+    list-style: none;
+}
+
+li{
+    word-spacing: normal;
+    font-size: medium;
+    text-decoration-color: aliceblue;
+    background: black;
+    list-style: none;
+}
+
+a{
+    color: aliceblue;
+    background-color: local;
+    text-decoration: underline;
+    padding: 0%;
+    border-start-end-radius: unset;
+}
